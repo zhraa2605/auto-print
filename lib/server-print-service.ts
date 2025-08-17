@@ -618,7 +618,7 @@ class ServerPrintService {
       const textContent = this.generateOrderText(order)
 
       // Create temporary text file
-      const textPath = path.join(process.cwd(), "temp", `order-${order.id}.txt`)
+      const textPath = path.join("/tmp", `order-${Date.now()}.txt`);
 
       // Ensure temp directory exists
       const tempDir = path.dirname(textPath)
